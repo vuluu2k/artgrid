@@ -33,8 +33,8 @@ export default function AdminQuote() {
     }
     return (
         <div className="container">
-            <Table  bordered hover size="sm">
-                <thead >
+            <Table  bordered hover size="sm" style={{color:'white'}}>
+                <thead style={{color:'red'}}>
                     <tr>
                         <th >STT</th>
                         <th >Tên khách hàng</th>

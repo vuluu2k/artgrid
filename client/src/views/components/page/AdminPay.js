@@ -54,8 +54,8 @@ export default function AdminPay() {
                     <Col xs={12}>
                     <Tab.Content>
                         <Tab.Pane eventKey="first">
-                            <Table className="mt-2" striped bordered hover size="sm">
-                                <thead>
+                            <Table className="mt-2" striped bordered hover size="sm" style={{color:'white'}}>
+                                <thead style={{color:'red'}}>
                                     <tr>
                                     <th>STT</th>
                                     <th>Khách hàng</th>
@@ -89,8 +89,8 @@ export default function AdminPay() {
                             </Table>
                         </Tab.Pane>
                         <Tab.Pane eventKey="second">
-                            <Table className="mt-2" striped bordered hover size="sm">
-                                <thead>
+                            <Table className="mt-2" striped bordered hover size="sm" style={{color:'white'}}>
+                                <thead style={{color:'red'}}>
                                     <tr>
                                     <th>STT</th>
                                     <th>Khách hàng</th>
