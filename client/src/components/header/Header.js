@@ -15,7 +15,7 @@ export default function Header({products}) {
     return (
         <>
             <div className="topBar">
-                <Container className="d-flex justify-content-between align-items-center w-100">
+                <div className="d-flex justify-content-between align-items-center w-100" style={{padding:'0 16px'}}>
                     <div className="SubTitle">ARTGRI.IO </div>
                     <div className="IconClass">
                         <div className="d-flex justify-content-between align-items-center">
@@ -26,15 +26,15 @@ export default function Header({products}) {
                         </div>
                     </div>
 
-                </Container>
+                </div>
             </div>
             <div>
-                <Container className="d-flex justify-content-between align-items-center centerBar w-100">
+                <Container className="d-flex justify-content-center align-items-center centerBar w-100">
                     
-                    <div className="gps-bar" style={{display: 'flex',width:'70%',position:'fixed',zIndex:9}}> 
+                    <div className="gps-bar" style={{display: 'flex',width:'80%',position:'fixed',zIndex:9}}> 
                         <FormControl
                             type="text"
-                            placeholder="Tìm kiếm..."
+                            placeholder="Nhập tên sản phẩm muốn tìm trên ArtGrid"
                             style={{ width: "100%",height: "40px",marginLeft: "30px", }}
                             className="mr-sm-2"
                             size="sm"

@@ -23,7 +23,7 @@ export default function CartModal() {
       <>
         <Modal show={showCart} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Giỏ hàng</Modal.Title>
+            <Modal.Title>Giỏ hàng của bạn</Modal.Title>
           </Modal.Header>
           <Modal.Body>
               {(carts&&carts.length!==0)?carts.map(cart=>(

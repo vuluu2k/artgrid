@@ -25,7 +25,7 @@ export default function Cart() {
                 <Col xs={12} lg={8}  >
                     <Table borderless responsive >
                         <thead>
-                            <tr style={{textTransform: 'uppercase',borderBottom:'2px solid #E3E3E3'}}>
+                            <tr style={{textTransform: 'uppercase',borderBottom:'2px solid #E3E3E3' ,color:'white'}}>
                                 <th colSpan="2" style={{padding:"12px 0"}}>Sản phẩm</th>
                                 <th>Giá</th>
                                 <th>Số lương</th>
@@ -35,7 +35,7 @@ export default function Cart() {
                         </thead>
                         <tbody className=" font-weight-bolder">
                             {(carts&&carts.length!==0)?carts.map(cart=>(
-                                <tr key={cart.product._id} style={{textTransform: 'uppercase',borderBottom:'1px solid #E3E3E3'}}>
+                                <tr key={cart.product._id} style={{textTransform: 'uppercase',borderBottom:'1px solid #E3E3E3',color:'white'}}>
                                     <td style={{padding:"12px 0"}}>
                                         <img src={cart.product.imgCarUrl} alt={cart.product.nameCar} className="img-fluid" width="100" height="180"/>
                                     </td>
@@ -69,13 +69,13 @@ export default function Cart() {
                     </div>
                 </Col>
                 <Col xs={12} lg={4}>
-                    <Table borderless>
+                    <Table borderless style={{color:'white'}}>
                         <thead>
-                            <tr style={{textTransform: 'uppercase',borderBottom:'2px solid #E3E3E3'}}>
+                            <tr style={{textTransform: 'uppercase',borderBottom:'2px solid #E3E3E3',color:'white'}}>
                                 <th colSpan="2" style={{padding:"12px 0"}}>TỔNG SỐ LƯỢNG</th>
                             </tr>
                         </thead>
-                        <tbody className=" font-weight-bolder">
+                        <tbody className=" font-weight-bolder" >
                             <tr style={{borderBottom:'2px solid #E3E3E3'}}>
                                 <td>Tổng phụ</td>
                                 <td className="text-red">{formatToCurrency(sumMoney())}<sup>₫</sup></td>
@@ -89,23 +89,7 @@ export default function Cart() {
                                     <Button to="/pay" as={Link} variant="dark" style={{width:'100%',fontWeight:'600'}}>TIẾN HÀNH THANH TOÁN</Button>
                                 </th>
                             </tr>
-                            <tr>
-                                <td colSpan="2" style={{padding:"0"}}>
-                                    <div variant="danger" 
-                                        style={{
-                                            backgroundColor:'#DC3545', width:'100%',
-                                            height:'38px',lineHeight:'38px',
-                                            textAlign:'left',fontWeight:'600',
-                                            color:'#fff',borderRadius:'5px'
-                                        }} 
-                                    >
-                                        <i style={{marginLeft:'10px'}} className="fas fa-tags"></i>
-                                        <span style={{marginLeft:'5px'}}>
-                                            PHIẾU ƯU ĐÃI
-                                        </span>
-                                    </div>
-                                </td>
-                            </tr>
+                          
                         </tbody>
                     </Table>
                 </Col>

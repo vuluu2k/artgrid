@@ -112,7 +112,7 @@ export default function Pay() {
     }
     
     return (
-        <Container style={{padding:'36px 0'}}>
+        <Container style={{padding:'36px 0',color:'white'}}>
             <Form>
                 <Row>
                     <Col xs={12} lg={7}>
@@ -204,7 +204,7 @@ export default function Pay() {
                     </Col>
                     <Col xs={12} lg={5}>
                         <div className="d-flex" style={{border:'1px solid red'}}>
-                            <Table borderless style={{width:'95%',margin:'auto'}}>
+                            <Table borderless style={{width:'95%',margin:'auto',color:'white'}}>
                                 <thead>
                                     <tr>
                                         <th>ĐƠN HÀNG CỦA BẠN</th>

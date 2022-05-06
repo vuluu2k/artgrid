@@ -10,6 +10,9 @@ export default function ControlledCarousel({image}) {
       setIndex(selectedIndex);
     };
     const imageFooter=image.filter(i=>{return i.kind==="footer"})
+
+    return null;
+
     return (
       <Carousel activeIndex={index} onSelect={handleSelect}>
         {

@@ -1,46 +1,58 @@
-import React from 'react';
-import {Container, Row, Col} from 'react-bootstrap';
-import ControlledCarousel from '../../../components/carousel/ControlledCarousel';
-import PleaseBuyACar from '../content/home/PleaseBuyACar';
-import LineCarView from '../content/home/LineCarView';
-import ContentCard from '../../../components/card/ContentCard';
-import CardHot from '../../../components/News/cardhot';
-import {NewContext} from '../../../contexts/NewContext'
-import {ProductContext} from '../../../contexts/ProductContext'
-import {useContext, useState} from 'react';
-import PaginationCus from '../../../components/pagination/PaginationCus';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import ControlledCarousel from "../../../components/carousel/ControlledCarousel";
+import PleaseBuyACar from "../content/home/PleaseBuyACar";
+import LineCarView from "../content/home/LineCarView";
+import ContentCard from "../../../components/card/ContentCard";
+import CardHot from "../../../components/News/cardhot";
+import { NewContext } from "../../../contexts/NewContext";
+import { ProductContext } from "../../../contexts/ProductContext";
+import { useContext, useState } from "react";
+import PaginationCus from "../../../components/pagination/PaginationCus";
 
-export default function Home({products,image}) {
-    const { newState:{news}} = useContext(NewContext)
+export default function Home({ products, image }) {
+  const {
+    newState: { news },
+  } = useContext(NewContext);
 
-    const productcategory = products.filter(item=>item.category==='logo')
- 
+  const productcategory = products.filter((item) => item.category === "logo");
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [productsPerPage] = useState(3);
+  // Get Current Products
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  // const currentProducts = productcategory.slice(indexOfFirstProduct,indexOfLastProduct);
+  // ChangePage
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
-    const [currentPage, setCurrentPage] = useState(1);
-    const [productsPerPage] = useState(3);
-    // Get Current Products
-    const indexOfLastProduct = currentPage * productsPerPage;
-    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-    // const currentProducts = productcategory.slice(indexOfFirstProduct,indexOfLastProduct);
-    // ChangePage
-    const paginate = pageNumber => {
-        setCurrentPage(pageNumber);
-    }
-
-    return (
-        <>
-            <ControlledCarousel image={image} />
-            <Container style={{padding:'15px 0'}}>
-                <div  className="TitleCar d-flex">
-                    <div style={{textAlign:'center',textTransform:'uppercase',fontSize:'19px',margin:'auto',fontWeight:'bold'}}>
-                        {/* <div className="SubTitleCar">Chân dung</div> */}
-                        <hr style={{borderBottom:'4px solid',width:'75%',color:'rgb(255, 11, 11)'}}/>
-                    </div>
-                </div>
-                <PleaseBuyACar products={products} />
-            </Container>
-            {/* <div >
+  return (
+    <>
+      <ControlledCarousel image={image} />
+      <div className="TitleCar d-flex">
+        <div
+          style={{
+            textAlign: "center",
+            textTransform: "uppercase",
+            fontSize: "19px",
+            margin: "auto",
+            fontWeight: "bold",
+          }}
+        >
+          {/* <div className="SubTitleCar">Chân dung</div> */}
+          <hr
+            style={{
+              borderBottom: "4px solid",
+              width: "75%",
+              color: "rgb(255, 11, 11)",
+            }}
+          />
+        </div>
+      </div>
+      <PleaseBuyACar products={products} />
+      {/* <div >
                 <Container style={{padding:'15px 0'}}>
                     <div  className="TitleCar d-flex">
                         <div style={{textAlign:'center',textTransform:'uppercase',fontSize:'19px',margin:'auto',fontWeight:'bold'}}>
@@ -51,7 +63,7 @@ export default function Home({products,image}) {
                     <LineCarView products={products}  />
                 </Container>
             </div> */}
-            {/* <Container style={{padding:'36px 0'}}>
+      {/* <Container style={{padding:'36px 0'}}>
                 <div  className="TitleCar d-flex">
                     <div style={{textAlign:'center',textTransform:'uppercase',fontSize:'19px',margin:'auto',fontWeight:'bold'}}>
                         <div className="SubTitleCar">VÌ SAO NÊN MUA SẢN PHẨM TẠI ĐÂY</div>
@@ -79,7 +91,7 @@ export default function Home({products,image}) {
                     </Col>
                 </Row>
             </Container> */}
-            {/* <div >
+      {/* <div >
             <Container  style={{padding:'15px 0' }}>
                 <div  className="TitleCar d-flex">
                     <div style={{textAlign:'center',textTransform:'uppercase',fontSize:'19px',margin:'auto',fontWeight:'bold'}}>
@@ -90,6 +102,6 @@ export default function Home({products,image}) {
                 <PleaseBuyACar  products={productcategory} />
             </Container>
             </div> */}
-        </>
-    )
+    </>
+  );
 }

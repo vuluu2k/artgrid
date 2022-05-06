@@ -54,9 +54,9 @@ export default function QuoteModal() {
     }
     return (
       <>
-        <Modal show={showQuote} onHide={handleClose} >
+        <Modal show={showQuote} onHide={handleClose} size='lg' >
           <Modal.Header closeButton>
-            <Modal.Title>Đăng ký nhận báo giá</Modal.Title>
+            <Modal.Title>Đăng ký nhận khuyến mãi sản phẩm</Modal.Title>
           </Modal.Header>
           <Modal.Body>
                 <Form.Group>
@@ -68,7 +68,7 @@ export default function QuoteModal() {
                 </Form.Group>
                 <Form.Group>
                     <Form.Control as='select' value={product} name='product' onChange={onChangeCreateQuoteForm} required>
-                        <option value="">--Chọn sản phẩm muốn nhận báo giá--</option>
+                        <option value="">--Chọn sản phẩm--</option>
                         {products.map(product=>(
                           <option value={product._id} key={product._id}>{product.nameCar}</option>
                         ))}
@@ -77,7 +77,7 @@ export default function QuoteModal() {
           </Modal.Body>
           <Modal.Footer>
             <Button variant="danger" onClick={onSubmit}>
-              Nhận báo giá
+              Nhận thông tin
             </Button>
             <Button variant="dark" onClick={handleClose}>
               Quay lại

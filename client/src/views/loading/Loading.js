@@ -111,19 +111,13 @@ export default function Loading({ PageRoute }) {
   );
   return (
     <>
-      <div style={{ marginLeft: "250px" }}>
-        <Header products={products} />{" "}
-      </div>
-
-      <div className=" d-flex">
+      <div >
         <div
           style={{
-            marginTop: "-137px",
             width: "250px",
             height: "100vh",
             position: "fixed",
             zIndex: "99999",
-            backgroundColor: "#000",
           }}
         >
           <Row
@@ -164,23 +158,6 @@ export default function Loading({ PageRoute }) {
               <i class="fas fa-book"></i> Giới thiệu
             </Nav.Link>
           </Row>
-          {/* <Row style={{ width: "250px" , marginTop: "20px",borderBottom: "1px solid #fff" }}>
-            <NavDropdown
-              style={{ color: "#fff ",marginLeft: "20px" }}
-              title="Chân dung"
-              id="basic-nav-dropdown"
-              className="font-custom text_white "
-            >
-                
-              {products.map((product) => (
-                <div key={product._id}>
-                  <NavDropdown.Item style={{color:"#000"}} to={`/products/${product.slug}`} as={Link}>
-                    {product.nameCar}
-                  </NavDropdown.Item>
-                </div>
-              ))}
-            </NavDropdown>
-          </Row> */}
           <Row
             to="/products"
             as={Link}
@@ -235,24 +212,20 @@ export default function Loading({ PageRoute }) {
               <i class="fas fa-phone"></i> Liên hệ
             </Nav.Link>
           </Row>
-          {/* <Row style={{ width: "250px", marginTop: "20px" }}>
-            <FormControl
-              type="text"
-              placeholder="Tìm kiếm..."
-              style={{ width: "160px", marginLeft: "30px" }}
-              className="mr-sm-2"
-              size="sm"
-            />
-            <Button variant="outline-success" className="font-custom" size="sm">
-              <i className="fas fa-search"></i>
-            </Button>
-          </Row> */}
         </div>
       </div>
-      <div style={{ marginLeft: "250px", marginTop: "20px" }}>
-        {body}
-        <Footer products={products} image={image} />
+      <div
+        style={{
+          marginLeft: "250px",
+          paddingTop: "20px",
+          // background: "linear-gradient(45deg,#00d4ff, #020024)",
+          minHeight:'100vh',
+          color: "white",
+        }}
+      >
+        <Header products={products} /> {body}
       </div>
+      <Footer products={products} image={image} />
       <ToastQuote />
       <QuoteModal />
       <CartModal />

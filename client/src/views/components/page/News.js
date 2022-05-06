@@ -26,9 +26,8 @@ export default function News() {
         setCurrentPage(pageNumber);
     }
   return (
-    <Container style={{ padding: "36px 0" }}>
+    <div style={{ padding: "36px 0" }}>
       
-      <Container style={{padding:'36px 0'}}>
                 <div  className="TitleCar d-flex">
                     <div style={{textAlign:'center',textTransform:'uppercase',fontSize:'19px',margin:'auto',fontWeight:'bold'}}>
                         <div className="SubTitleCar"> </div>
@@ -36,7 +35,6 @@ export default function News() {
                     </div>
                 </div>
                 <PleaseBuyACar products={productcategory} />
-            </Container>
      
         <div className="d-flex justify-content-center pt-5" >
             <PaginationCus
@@ -47,7 +45,7 @@ export default function News() {
             />
         </div>
  
-    </Container>
+    </div>
     
   );
 }

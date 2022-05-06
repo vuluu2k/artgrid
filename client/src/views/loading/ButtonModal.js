@@ -22,7 +22,7 @@ export default function ButtonModal() {
                 delay={{show:250,hide:300}}
                 overlay={
                     <Tooltip>
-                        <div style={{fontWeight:'bolder'}}>Đăng kí nhận báo giá</div>
+                        <div style={{fontWeight:'bolder'}}>Đăng kí nhận khuyến mãi</div>
                     </Tooltip>
                 }
             >
@@ -35,7 +35,7 @@ export default function ButtonModal() {
                 delay={{show:250,hide:300}}
                 overlay={
                     <Tooltip>
-                        <div style={{fontWeight:'bolder'}}>Giỏ hàng</div>
+                        <div style={{fontWeight:'bolder'}}>Giỏ hàng của bạn</div>
                     </Tooltip>
                 }
             >

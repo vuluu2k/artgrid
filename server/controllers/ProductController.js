@@ -60,7 +60,7 @@ class ProductController {
     try {
       const uploadedResponse = await cloudinary.uploader.upload(imgCarUrl, {
         upload_preset: "designmarket",
-        eager: { width: 900, height: 500, crop: "pad" },
+        eager: { width: 900, height: 500, crop: "fill" },
       });
       console.log(uploadedResponse);
       const newProduct = new Product({
@@ -160,7 +160,7 @@ class ProductController {
       const uploadedResponse = await cloudinary.uploader.upload(imgCarUrl, {
         public_id: product.imgCarId,
         overwrite: true,
-        eager: { width: 900, height: 500, crop: "pad" },
+        eager: { width: 900, height: 500, crop: "fill" },
       });
       let updateProduct = {
         nameCar,
