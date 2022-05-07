@@ -77,7 +77,7 @@ export default function QuoteModal() {
           </Modal.Body>
           <Modal.Footer>
             <Button variant="danger" onClick={onSubmit}>
-              Nhận thông tin
+              Đăng ký
             </Button>
             <Button variant="dark" onClick={handleClose}>
               Quay lại

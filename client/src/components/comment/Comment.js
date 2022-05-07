@@ -106,9 +106,9 @@ export default function Comment() {
               <div>  
               {comments.map((comment)=>(
                <Card style={{margin:'10px'}}>
-                  <Card.Title style={{margin:'10px',border:'1px'}}>{comment.nameComment}  ({comment.emailComment})
+                  <Card.Title style={{margin:'10px',border:'1px',color:"#000"}}>{comment.nameComment}  ({comment.emailComment})
                   </Card.Title>
-                  <Card.Text as="h6" style={{marginLeft:'10px',border:'1px'}}>
+                  <Card.Text as="h6" style={{marginLeft:'10px',border:'1px',color:"#000"}}>
                     {comment.contentComment}
                   </Card.Text>
                   <div style={{marginLeft:'10px'}}>

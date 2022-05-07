@@ -69,7 +69,7 @@ export default function AdminChangeSilder() {
                                     imageFooter.map((img,index)=>(
                                         <Col xs={12} className="mb-2" key={img._id}>
                                             <div className="d-flex justify-content-between align-items-center">
-                                                <span>Ảnh thứ {index+1}</span>
+                                                <span style={{color:'white'}}>Ảnh thứ {index+1}</span>
                                                 <span>
                                                     <Button onClick={()=>choseImageUpdate(img._id)} className="mt-2 mb-2 mr-2" variant="success" size="sm"><i className="fas fa-pencil-alt"></i></Button>
                                                     <Button onClick={()=>setShowDelImage({show:true,imageId:img._id})} className="mt-2 mb-2" variant="danger" size="sm"><i className="fas fa-trash-alt"></i></Button>

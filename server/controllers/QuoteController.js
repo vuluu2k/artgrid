@@ -14,7 +14,7 @@ class QuoteController {
                 product
             })
             await newQuote.save();
-            res.json({success:true,message:'Bạn đăng kí nhận báo giá thành công',quote:newQuote});
+            res.json({success:true,message:'Bạn đã đăng kí thành công',quote:newQuote});
         } catch (e) {
             console.log(e);
             res.status(500)

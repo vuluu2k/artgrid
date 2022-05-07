@@ -35,8 +35,8 @@ export default function ProductDetail({products,productsLoading}) {
                         </Col>
                         <Col xs="12" md="5">
                             <Card.Body>
-                                <Card.Title>{productSlug.nameCar}</Card.Title>
-                                <Card.Text>
+                                <Card.Title style={{color:"#000"}}>{productSlug.nameCar}</Card.Title>
+                                <Card.Text style={{color:"#000"}} >
                                     {parse(productSlug.specicalCar)}
                                 </Card.Text>
                                
