@@ -9,7 +9,7 @@ import {
 } from "../contexts/contants";
 
 export const productReducer = (state, action) => {
-  const { type, payload } = action;
+  const { type, payload,message } = action;
   switch (type) {
     case PRODUCT_LOAD_SUCCESS:
       return {
@@ -39,6 +39,7 @@ export const productReducer = (state, action) => {
       return {
         ...state,
         products: [...state.products, payload],
+        message:message
       };
     case PRODUCT_UPDATE_SUCCESS:
       const newProducts = state.products.map((product) => {
@@ -48,11 +49,13 @@ export const productReducer = (state, action) => {
       return {
         ...state,
         products: newProducts,
+        message:message
       };
     case DELETE_PRODUCT_SUCESS:
       return {
         ...state,
         products: state.products.filter((product) => product._id !== payload),
+        message:message
       };
     default:
       return state;

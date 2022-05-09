@@ -20,6 +20,7 @@ const ProductContextProvider = ({children})=>{
         productsLoading:true,
         productLoading:true,
         graphicsLoading:true,
+        message:'',
     })
 
     const [showAddCar,setShowAddCar]=useState(false);
@@ -72,7 +73,7 @@ const ProductContextProvider = ({children})=>{
         try {
             const response= await axios.post(`${apiUrl}/products`,productForm);
             if(response.data.success){
-                dispatch({type:PRODUCT_CREATE_SUCCESS,payload:response.data.product})
+                dispatch({type:PRODUCT_CREATE_SUCCESS,payload:response.data.product,message:response.data.message})
                 return response.data;
             }
         } catch (e) {
@@ -84,7 +85,7 @@ const ProductContextProvider = ({children})=>{
         try {
             const response = await axios.put(`${apiUrl}/products/${productForm._id}`,productForm)
             if(response.data.success){
-                dispatch({type:PRODUCT_UPDATE_SUCCESS,payload:response.data.product})
+                dispatch({type:PRODUCT_UPDATE_SUCCESS,payload:response.data.product,message:response.data.message})
                 return response.data;
             }
         } catch (e) {
@@ -97,7 +98,7 @@ const ProductContextProvider = ({children})=>{
         try {
             const response=await axios.delete(`${apiUrl}/products/${productId}`)
             if(response.data.success){
-                dispatch({type:DELETE_PRODUCT_SUCESS,payload:productId})
+                dispatch({type:DELETE_PRODUCT_SUCESS,payload:productId,message:response.data.message})
             }
         } catch (e) {
             console.log(e);

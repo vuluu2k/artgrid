@@ -43,7 +43,6 @@ export default function UpdateImageModal() {
             return
         }
         await updateImage(updateImg);
-        alert("Cập nhập slide thành công!");
         handleClose();
     }
     const handleClose=()=>{

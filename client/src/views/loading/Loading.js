@@ -70,7 +70,7 @@ export default function Loading({ PageRoute }) {
   useEffect(() => {
     getNew();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [news]);
+  }, []);
 
   const handleClickDelete = () => {
     deleteCart(productId);

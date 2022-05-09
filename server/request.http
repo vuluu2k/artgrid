@@ -196,17 +196,18 @@ Content-Type: application/json
 }
 ###
 # Tạo tài khoản
-POST http://localhost:5000/api/accounts/create
+POST https://artgrid.herokuapp.com/api/accounts/create
 Content-Type: application/json
 
 {
-    "nameAccount":"thanh",
+    "nameAccount":"thanh1",
     "passwordAccount":"1234"
 }
 
 ###
 # Đăng nhập tài khoản
-POST http://localhost:5000/api/accounts/login
+
+POST https://artgrid.herokuapp.com/api/accounts/login
 Content-Type: application/json
 
 {
@@ -220,7 +221,7 @@ Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiI2MT
 
 ###
 # Nhận news
-GET  http://localhost:5000/api/news
+GET  https://artgrid.herokuapp.com/api/news
 
 ###
 PUT  http://localhost:5000/api/news/61809d218a2bd42c3e5cb4e4
