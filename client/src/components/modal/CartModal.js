@@ -28,7 +28,7 @@ export default function CartModal() {
           <Modal.Body>
               {(carts&&carts.length!==0)?carts.map(cart=>(
                 <ItemCart key={cart.product._id} cart={cart} />
-              )):<h6 align="center">Chưa có sản phẩm nào được thêm vào </h6> }
+              )):<h6 align="center" >Chưa có sản phẩm nào được thêm vào </h6> }
               <hr />
                 <div align="center" style={{fontWeight:'bold'}}>
                   Tổng phụ: <span style={{color:'#C82333'}}>{formatToCurrency(sumMoney())}<sup>₫</sup></span>

@@ -56,7 +56,7 @@ export default function Cart() {
                                     </td>
                                 </tr>
                             )):<tr>
-                                    <td colSpan="5" align="center">Chưa có sản phẩm nào được thêm vào </td>
+                                    <td colSpan="5" align="center" style={{color:"red"}}>Chưa có sản phẩm nào được thêm vào </td>
                                 </tr>
                             }
                         </tbody>

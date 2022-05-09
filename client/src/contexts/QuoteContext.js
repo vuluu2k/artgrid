@@ -12,7 +12,7 @@ const QuoteContextProvider=({children})=>{
         quotesLoading:true,
         quotes:[]
     })
-    const [showQuote, setShowQuote] = useState(true);
+    const [showQuote, setShowQuote] = useState(false);
     const [showToastQuote,setShowToastQuote] = useState({
         show:false,
         message:''

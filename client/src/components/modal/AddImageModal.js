@@ -44,6 +44,7 @@ export default function AddImageModal() {
             return
         }
         await createImage(newImage);
+        alert("Thêm slide thành công!");
         handleClose();
     }
     const handleClose=()=>{

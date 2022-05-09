@@ -6,7 +6,7 @@ export default function ToastQuote() {
     const {showToastQuote:{show,message},setShowToastQuote}=useContext(QuoteContext);
     return (
         <Toast 
-            style={{position:'fixed',top:'10%',right:'10px',zIndex:'2'}} 
+            style={{position:'fixed',top:'20%',right:'10px',zIndex:'2'}} 
             onClose={()=>setShowToastQuote({show:false,message:''})} 
             show={show}
             className="bg-success text-white" 

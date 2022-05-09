@@ -66,6 +66,7 @@ const CartContextProvider=({children})=>{
     }
     const clearCart=()=>{
         localStorage.removeItem(LOCAL_STORAGE_PRODUCTS_CART_NAME);
+       
     }
 
 

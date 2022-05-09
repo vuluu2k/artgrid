@@ -62,6 +62,7 @@ export default function UpdateOrderModal() {
             return
         }
         await updateOrder(upOrder)
+        alert("Cập nhập thành công!");
         handleClose()
     }
     return (

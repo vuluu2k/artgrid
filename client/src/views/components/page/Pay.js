@@ -12,8 +12,9 @@ import formatToCurrency from '../../../middleware/NumberToVND'
 import {useHistory} from 'react-router-dom'
 import validator from 'validator';
 import './css/Pay.css'
+import {QuoteContext} from '../../../contexts/QuoteContext';
 export default function Pay() {
-    
+    const {showQuote, setShowQuote,createQuote,setShowToastQuote} = useContext(QuoteContext);
     const history = useHistory()
     const{getCart,clearCart} = useContext(CartContext);
     const{createOrder} = useContext(PayContext);
@@ -86,7 +87,9 @@ export default function Pay() {
             return
         }
         
-        await createOrder(newOrder)
+        const {success,message}=await createOrder(newOrder)
+        
+      setShowToastQuote({show:success,message});
         clearCart()
         setNewOrder({
             firstName:'',
@@ -101,7 +104,7 @@ export default function Pay() {
             note:'',
             pay:''
         })
-        history.push('/confirm')
+        // history.push('/confirm')
     }
     const sumMoney=()=>{
         let sum =0 ;

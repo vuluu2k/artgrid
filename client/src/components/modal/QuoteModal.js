@@ -61,10 +61,11 @@ export default function QuoteModal() {
           <Modal.Body>
                 <Form.Group>
                     <Form.Control type='text' placeholder='Họ và tên' value={nameQuote} name='nameQuote' onChange={onChangeCreateQuoteForm} required aria-describedby='name-help' />
-                    <Form.Text id='name-help'>Required</Form.Text>
+                    <Form.Text style={{color:"red"}} id='name-help'>Bắt buộc *</Form.Text>
                 </Form.Group>
                 <Form.Group>
                     <Form.Control type='text' placeholder='Số điện thoại' value={phoneQuote} name='phoneQuote' onChange={onChangeCreateQuoteForm} required/>
+                    <Form.Text style={{color:"red"}} id='name-help'>Bắt buộc *</Form.Text>
                 </Form.Group>
                 <Form.Group>
                     <Form.Control as='select' value={product} name='product' onChange={onChangeCreateQuoteForm} required>
