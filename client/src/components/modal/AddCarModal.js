@@ -174,7 +174,6 @@ export default function AddCarModal() {
       return;
     }
     await createProduct(newCar);
-    alert("Thêm thành công!");
     handleClose();
   };
 

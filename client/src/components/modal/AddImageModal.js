@@ -44,6 +44,7 @@ export default function AddImageModal() {
             return
         }
         await createImage(newImage);
+        alert('Thêm thành công!')
         handleClose();
     }
     const handleClose=()=>{

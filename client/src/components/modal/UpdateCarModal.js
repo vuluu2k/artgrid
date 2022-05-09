@@ -109,7 +109,6 @@ export default function UpdateCarModal() {
             return
         }
         await updateProduct(updateCar);
-        alert("Cập nhập thành công!");
         handleClose();
     }
     return (
