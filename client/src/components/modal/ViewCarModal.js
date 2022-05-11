@@ -78,8 +78,8 @@ export default function ViewCarModal() {
                                     {parse(product.descriptionCar)}
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
-                                    <Table striped bordered hover size="sm" style={{color:'white'}}>
-                                        <thead style={{color:'white'}}>
+                                    <Table striped bordered hover size="sm" style={{color:'#000'}}>
+                                        <thead style={{color:'#000'}}>
                                             <tr>
                                                 <th width="50%">Thuộc tính</th>
                                                 <th>Chỉ số</th>

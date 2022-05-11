@@ -104,7 +104,7 @@ export default function Pay() {
             note:'',
             pay:''
         })
-        // history.push('/confirm')
+         history.push('/confirm')
     }
     const sumMoney=()=>{
         let sum =0 ;
