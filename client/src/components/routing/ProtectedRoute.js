@@ -34,7 +34,7 @@ export default function ProtectedRoute({component:Component,...rest}) {
                                 <MenuAdmin />
                             </Col>
                             <Col xs={9} style={{paddingLeft:'7.5px',minHeight:'100vh'}}>
-                                <div style={{marginTop:'50px'}}>
+                                <div style={{marginTop:'10px'}}>
                                     <Component {...rest} {...props}/>
                                 </div>
                             </Col>

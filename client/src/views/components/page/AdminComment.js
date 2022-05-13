@@ -67,7 +67,7 @@ export default function AdminComment() {
     <div>
       <Row>
         <Col xs="3">
-          <Card style={{ width: "100%" }} border="light">
+          <Card style={{ width: "100%",overflow:'auto',maxHeight:'calc(100vh - 34px)' }} border="light">
             {products.map((product) => (
               <Row
                 className="d-flex align-items-center"

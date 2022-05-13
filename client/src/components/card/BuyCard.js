@@ -14,7 +14,7 @@ export default function BuyCard({product}) {
         setShowCart(true)
     }
     return (
-        <Card border="light" style={{ marginTop:"5px", width: '100%'}}>
+        <Card style={{ marginTop:"5px", width: '100%'}}>
             <Link to={`/products/${product.slug}`} className="ani_buy_car"  >
                 <Card.Img variant="top" style={{width: '100%'}} src={product.imgCarUrl} />
             </Link>

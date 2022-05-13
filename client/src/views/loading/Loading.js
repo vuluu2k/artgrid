@@ -218,12 +218,13 @@ export default function Loading({ PageRoute }) {
         style={{
           marginLeft: "250px",
           paddingTop: "20px",
+          paddingBottom:50,
           // background: "linear-gradient(45deg,#00d4ff, #020024)",
           minHeight:'100vh',
           color: "white",
         }}
       >
-        <Header products={products} /> {body}
+        <Header products={products} />  {body}
       </div>
       <Footer products={products} image={image} />
       <ToastQuote />

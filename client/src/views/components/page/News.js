@@ -5,7 +5,6 @@ import CardInfor from "../../../components/News/cardinfor";
 import CardLeft from "../../../components/News/cardleft";
 import PleaseBuyACar from "../content/home/PleaseBuyACar";
 import { useContext, useState } from "react";
-import PaginationCus from "../../../components/pagination/PaginationCus";
 import { ProductContext } from "../../../contexts/ProductContext";
 
 export default function News() {
@@ -13,20 +12,6 @@ export default function News() {
     productState: { products },
   } = useContext(ProductContext);
   const productcategory = products.filter((item) => item.category === "logo");
-
-  const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(8);
-  // Get Current Products
-  const indexOfLastProduct = currentPage * productsPerPage;
-  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = productcategory.slice(
-    indexOfFirstProduct,
-    indexOfLastProduct
-  );
-  // ChangePage
-  const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
   return (
     <div style={{ padding: "36px 0" }}>
       <div className="TitleCar d-flex">
@@ -50,15 +35,6 @@ export default function News() {
         </div>
       </div>
       <PleaseBuyACar products={productcategory} />
-
-      <div className="d-flex justify-content-center pt-5">
-        <PaginationCus
-          productsPerPage={productsPerPage}
-          totalProducts={productcategory.length}
-          paginate={paginate}
-          currentPage={currentPage}
-        />
-      </div>
     </div>
   );
 }

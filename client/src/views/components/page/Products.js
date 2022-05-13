@@ -12,32 +12,10 @@ export default function Products() {
   const productcategory = products.filter(
     (item) => item.category === "graphics"
   );
-  const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(8);
-  // Get Current Products
-  const indexOfLastProduct = currentPage * productsPerPage;
-  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = productcategory.slice(
-    indexOfFirstProduct,
-    indexOfLastProduct
-  );
-  // ChangePage
-  const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
   return (
     <div style={{ padding: "36px 0" }}>
       <h1 style={{ color: "black" }}></h1>
       <PleaseBuyACar products={productcategory} />
-
-      <div className="d-flex justify-content-center pt-5">
-        <PaginationCus
-          productsPerPage={productsPerPage}
-          totalProducts={productcategory.length}
-          paginate={paginate}
-          currentPage={currentPage}
-        />
-      </div>
     </div>
   );
 }
