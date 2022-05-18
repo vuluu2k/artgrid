@@ -31,17 +31,17 @@ export default function ProductDetail({products,productsLoading}) {
                 <Card border="light" style={{ width: '100%' }}>
                     <Row>
                         <Col xs="12" md="7">
-                            <Card.Img onClick={()=>setShow(true)} variant="top" src={productSlug.imgCarUrl} />
+                            <Card.Img onClick={()=>setShow(true)} variant="top" src={productSlug?.imgCarUrl} />
                         </Col>
                         <Col xs="12" md="5">
                             <Card.Body>
-                                <Card.Title style={{color:"#fff"}}>{productSlug.nameCar}</Card.Title>
+                                <Card.Title style={{color:"#fff"}}>{productSlug?.nameCar}</Card.Title>
                                 <Card.Text style={{color:"#fff"}} >
-                                    {parse(productSlug.specicalCar)}
+                                    {parse(productSlug?.specicalCar)}
                                 </Card.Text>
                                
                                 <div style={{color:'red'}} className="d-flex justify-content-between">
-                                    {formatToCurrency(productSlug.costCar)}₫
+                                    {formatToCurrency(productSlug?.costCar)}₫
                                     <Button variant="danger" onClick={handeBuy}>ĐẶT HÀNG</Button>
                                 </div>
                             </Card.Body>
@@ -49,7 +49,7 @@ export default function ProductDetail({products,productsLoading}) {
                     </Row>
                 </Card>
                 <Modal show={show} onHide={handleClose}  size="lg" >
-                    <Image style={{borderRadius:"5em"}} src={productSlug.imgCarUrl}></Image>
+                    <Image style={{borderRadius:"5em"}} src={productSlug?.imgCarUrl}></Image>
                 </Modal>
             </div>
             <div>

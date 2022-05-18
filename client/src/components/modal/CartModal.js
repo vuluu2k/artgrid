@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Button,Modal} from 'react-bootstrap'
 import {useContext} from 'react';
 import ItemCart from './ItemCart';
 import {CartContext} from '../../contexts/CartContext'
 import {Link} from 'react-router-dom';
+import {LOCAL_STORAGE_PRODUCTS_CART_NAME} from '../../contexts/contants'
 
 export default function CartModal() {
     const {showCart, setShowCart,getCart} = useContext(CartContext);
-    const carts=getCart();
+    let carts=JSON.parse(localStorage.getItem(LOCAL_STORAGE_PRODUCTS_CART_NAME));
+
+
     const handleClose = () => setShowCart(false);
     const sumMoney = () =>{
         let sum=0;
